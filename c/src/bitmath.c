@@ -4,7 +4,7 @@
 This library is created by Rishabh. It is an open source library. Under the
 licence of GPL v3.0, you can contribute, modify and re-distribute the library for free
 under the same licence. For contributing in this library(repository),
-visit this github link:
+visit this github link: https://github.com/RishabhRD/bitmaths_c
 */
 
 
@@ -81,9 +81,9 @@ that are in range of int.
 */
 int substractTwo(int n1,int n2){
   while(n2!=0){
-    int borrow = ~n1&n2;
-    n1 = n1^n2;
-    n2 = borrow<<1;
+    int borrow = ~n1&n2; //~ is used for inversion of bits.
+    n1 = n1^n2;          //Taking xor of n1 and n2 and store it in n1
+    n2 = borrow<<1;      //Left shift one bit of borrow and save to n2
   }
   return n1;
 }
